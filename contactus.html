@@ -16,6 +16,14 @@
   <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+
+   <style>
+      #map {
+        width: 1000px;
+        height: 400px;
+      }
+    </style>
+
   
 </head>
 <body class="grey darken-4" background="img/bg.png">
@@ -24,9 +32,9 @@
       <a id="logo-container" href="#" class="brand-logo white-text" ><img src="img/logo.png" width="30%" height="30%"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html"  class="white-text">HOME</a></li>
-        <li><a href="#"  class="white-text">GALLERY</a></li>
+        <li><a href="gallery.html"  class="white-text">GALLERY</a></li>
         <li><a href="aboutus.html"  class="white-text">ABOUT US</a></li>
-        <li><a href="#"  class="white-text">CONTACT US</a></li>
+        <li><a href="contactus.html"  class="white-text">CONTACT US</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -36,51 +44,67 @@
     </div>
   </nav>
 
-
-
   <div class="container">
     <div class="row">
         <div class="col s7">
-          <h2 class="yellow-text text-darken-3">History Chenes</h2>
+          <h2 class="yellow-text text-darken-3">Contact us</h2>
           <h5 class="white-text thin">Feel free to browse and enjoy our designs! </h5>
         </div>
     </div>
-  </div>
 
-
-  <div class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row">
-          <h2 class="white-text thin">Proudly Presenting...</h2>
-          <h5 class="header col s12 light">A modern responsive front-end firm based on Material Design</h5>
-        </div>
+     <div class="row">
+      <div class="col s3"><img src="img/fb.png" width="40%" height="40%" class="right"></div>
+      <div class="col s9">
+        <p class="white-text thin">
+          https://www.facebook.com/PADAVELA/timeline
+        </p>
       </div>
     </div>
-    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
 
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s9" align="right">
-          <h3 class="yellow-text text-darken-3">With very affordable price!</h3>
-          <h5 class="grey-text thin">You can make a deal right ahead!</h5>
-        </div>
+     <div class="row">
+      <div class="col s3"><i class="material-icons yellow-text text-darken-2 large right">date_range</i></div>
+      <div class="col s9">
+        <p class="white-text thin">
+          Founded in 2010
+        </p>
       </div>
     </div>
-  </div>
 
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
+    <div class="row">
+      <div class="col s3"><i class="material-icons yellow-text text-darken-2 large right">phone</i></div>
+      <div class="col s9">
+        <p class="white-text thin">
+          telefax: 794-4586 / 749-1166 / 514-1211 / 514-0596
+        </p>
       </div>
     </div>
-    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
+
+     <div class="row">
+      <div class="col s3"><i class="material-icons yellow-text text-darken-2 large right">room</i></div>
+      <div class="col s9">
+        <p class="white-text thin">
+          2nd floor, Room 201 PADAVELA Bldg.1 2011 G.tuazon cor. Samar st. Balic-balic Sampaloc , Manila, Manila, Philippines
+        </p>
+      </div>
+    </div>
+
+    <div class="row center">
+      <div id="map" class="center"></div>
+    </div>
+    
+    <script>
+          function initMap() {
+            var mapDiv = document.getElementById('map');
+            var map = new google.maps.Map(mapDiv, {
+              center: {lat: 44.540, lng: -78.546},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            async defer></script>
+
+
   </div>
 
   <footer class="page-footer grey darken-4">
